@@ -1,0 +1,87 @@
+img {
+  max-width: 100%;
+}
+.content-area {
+  width: 100vw;
+  overflow: hidden;
+}
+
+.page,
+.page-lock {
+  width: 100vw;
+  height: 146vw;
+  border: 1px solid black;
+  box-sizing: border-box;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: 1.5s;
+}
+
+.page-lock {
+  background-color: #191919;
+}
+
+.page {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background: url(../img/book.jpg);
+  background-size: cover;
+  transform-origin: right;
+}
+
+#book1.open .page {
+  transform: rotateY(-180deg);
+}
+#book1.ready .page {
+  left: -100vw;
+}
+.frame {
+  width: 80%;
+  margin: auto;
+  margin-top: 20%;
+  box-sizing: border-box;
+  padding: 1em;
+  border: solid 2px #cdec2c;
+  text-align: center;
+}
+.frame img {
+  width: 100%;
+}
+.bar {
+  position: relative;
+  background-color: #949393;
+  margin: auto;
+  margin-top: 10%;
+  width: 80%;
+  height: 3px;
+  border-radius: 20px;
+}
+.seek {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  border-radius: 20px;
+  transition: width 1s ease;
+  background-color: #fff;
+}
+.seek.active {
+  width: 100%;
+}
+.btn {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: auto;
+  margin-top: 10%;
+}
+.btn div {
+  fill: #fff;
+  width: 20px;
+}
+.btn div.hidden {
+  display: none;
+}
