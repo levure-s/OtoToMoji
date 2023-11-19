@@ -268,14 +268,19 @@ footer p {
   padding: 1em;
   text-decoration: none;
 }
+.shop .imgContainer {
+  width: 100;
+}
 .goshop .links {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-wrap: wrap;
   margin-top: 25px;
 }
 .goshop .links a {
-  width: calc(33% - 11.25px);
+  width: 145px;
+  min-width: 145px;
+  margin: 0 6px 15px;
   margin-bottom: 15px;
 }
 .topBtn {
@@ -310,7 +315,7 @@ footer p {
   padding: 2em 1em;
 }
 
-@media (max-width: 670px) {
+@media (max-width: 750px) {
   .flex {
     display: block;
   }
@@ -325,12 +330,11 @@ footer p {
   }
   .imgContainer {
     width: 100%;
+    max-width: 400px;
+    margin: auto;
   }
   .textContainer {
     width: 100%;
-  }
-  .goshop .links a {
-    width: calc(50% - 11.25px);
   }
   .subhead {
     display: flex;
@@ -349,8 +353,12 @@ footer p {
   .credit .textContainer {
     padding-bottom: 2em;
   }
+  .movie .flex {
+    text-align: center;
+  }
   .movie iframe {
     width: 100%;
+    max-width: 447px;
     margin-bottom: 1em;
   }
   .link-btn {
