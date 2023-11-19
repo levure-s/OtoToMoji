@@ -15,9 +15,7 @@ main {
 footer {
   position: relative;
 }
-footer small {
-  display: block;
-  width: 100%;
+footer p {
   text-align: center;
   padding: 1em;
   color: #fff;
@@ -201,6 +199,7 @@ footer small {
   position: absolute;
   top: 50%;
   left: 2em;
+  width: calc(100% - 4em);
   transform: translateY(-50%);
 }
 .title-area.book {
@@ -284,8 +283,39 @@ footer small {
   .flex {
     display: block;
   }
+  .padding {
+    padding: 1em;
+  }
   .content-area {
     overflow: hidden;
+  }
+  .inner {
+    padding: 1em;
+  }
+  .imgContainer {
+    width: 100%;
+  }
+  .textContainer {
+    width: 100%;
+  }
+  .goshop .links a {
+    width: calc(50% - 11.25px);
+  }
+  .credit .flex,
+  .movie .flex {
+    padding-bottom: 0;
+  }
+  .credit .imgContainer,
+  .credit .textContainer {
+    padding-bottom: 2em;
+  }
+  .movie iframe {
+    width: 100%;
+    margin-bottom: 1em;
+  }
+  .link-btn {
+    margin: auto;
+    display: block;
   }
 }
 @media (max-width: 500px) {
