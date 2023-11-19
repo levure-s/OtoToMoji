@@ -301,6 +301,15 @@ footer p {
   .goshop .links a {
     width: calc(50% - 11.25px);
   }
+  .subhead {
+    display: flex;
+    align-items: flex-end;
+    font-size: 1.3em;
+  }
+  .part {
+    line-height: 1em;
+    flex: 1;
+  }
   .credit .flex,
   .movie .flex {
     padding-bottom: 0;
