@@ -9,129 +9,694 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   </head>
   <body>
-    <div class="content-area">
-      <div id="book1">
-        <div class="page-lock">
-          <div class="frame">
-            <img
-              src="./img/music.jpg"
-              alt="今夜、死にたいと思った。だから、歌いたいと願った。"
-            />
+    <header>
+      <div class="title-area book show">
+        <h1>今夜、死にたいきみは、明日を歌う。</h1>
+      </div>
+      <div class="title-area music">
+        <h1>今夜、死にたいと思った。だから、歌いたいと願った。</h1>
+      </div>
+    </header>
+    <section class="content-wraper">
+      <div class="content-area">
+        <div class="inner">
+          <div id="book">
+            <div class="page-lock"></div>
+            <div class="page-back"></div>
+            <div class="page"></div>
           </div>
-          <div class="player">
-            <div class="bar"><div class="seek"></div></div>
-            <div class="btn">
-              <div class="repeat">
-                <svg
-                  data-encore-id="icon"
-                  role="img"
-                  aria-hidden="true"
-                  viewBox="0 0 16 16"
-                  class="Svg-sc-ytk21e-0 kPpCsU"
-                >
-                  <path
-                    d="M0 4.75A3.75 3.75 0 0 1 3.75 1h8.5A3.75 3.75 0 0 1 16 4.75v5a3.75 3.75 0 0 1-3.75 3.75H9.81l1.018 1.018a.75.75 0 1 1-1.06 1.06L6.939 12.75l2.829-2.828a.75.75 0 1 1 1.06 1.06L9.811 12h2.439a2.25 2.25 0 0 0 2.25-2.25v-5a2.25 2.25 0 0 0-2.25-2.25h-8.5A2.25 2.25 0 0 0 1.5 4.75v5A2.25 2.25 0 0 0 3.75 12H5v1.5H3.75A3.75 3.75 0 0 1 0 9.75v-5z"
-                  ></path>
-                </svg>
+          <div id="music">
+            <div class="frame">
+              <img
+                src="./img/music.jpg"
+                alt="今夜、死にたいと思った。だから、歌いたいと願った。"
+              />
+            </div>
+            <div class="player">
+              <div class="bar"></div>
+              <div class="btn">
+                <div class="repeat">
+                  <svg
+                    data-encore-id="icon"
+                    role="img"
+                    aria-hidden="true"
+                    viewBox="0 0 16 16"
+                    class="Svg-sc-ytk21e-0 kPpCsU"
+                  >
+                    <path
+                      d="M0 4.75A3.75 3.75 0 0 1 3.75 1h8.5A3.75 3.75 0 0 1 16 4.75v5a3.75 3.75 0 0 1-3.75 3.75H9.81l1.018 1.018a.75.75 0 1 1-1.06 1.06L6.939 12.75l2.829-2.828a.75.75 0 1 1 1.06 1.06L9.811 12h2.439a2.25 2.25 0 0 0 2.25-2.25v-5a2.25 2.25 0 0 0-2.25-2.25h-8.5A2.25 2.25 0 0 0 1.5 4.75v5A2.25 2.25 0 0 0 3.75 12H5v1.5H3.75A3.75 3.75 0 0 1 0 9.75v-5z"
+                    ></path>
+                  </svg>
+                </div>
+                <div class="previous">
+                  <svg
+                    data-encore-id="icon"
+                    role="img"
+                    aria-hidden="true"
+                    viewBox="0 0 16 16"
+                    class="Svg-sc-ytk21e-0 kPpCsU"
+                  >
+                    <path
+                      d="M3.3 1a.7.7 0 0 1 .7.7v5.15l9.95-5.744a.7.7 0 0 1 1.05.606v12.575a.7.7 0 0 1-1.05.607L4 9.149V14.3a.7.7 0 0 1-.7.7H1.7a.7.7 0 0 1-.7-.7V1.7a.7.7 0 0 1 .7-.7h1.6z"
+                    ></path>
+                  </svg>
+                </div>
+                <div class="play">
+                  <svg
+                    data-encore-id="icon"
+                    role="img"
+                    aria-hidden="true"
+                    viewBox="0 0 24 24"
+                    class="Svg-sc-ytk21e-0 iYxpxA"
+                  >
+                    <path
+                      d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"
+                    ></path>
+                  </svg>
+                </div>
+                <div class="pause hidden">
+                  <svg
+                    data-encore-id="icon"
+                    role="img"
+                    aria-hidden="true"
+                    viewBox="0 0 24 24"
+                    class="Svg-sc-ytk21e-0 iYxpxA"
+                  >
+                    <path
+                      d="M5.7 3a.7.7 0 0 0-.7.7v16.6a.7.7 0 0 0 .7.7h2.6a.7.7 0 0 0 .7-.7V3.7a.7.7 0 0 0-.7-.7H5.7zm10 0a.7.7 0 0 0-.7.7v16.6a.7.7 0 0 0 .7.7h2.6a.7.7 0 0 0 .7-.7V3.7a.7.7 0 0 0-.7-.7h-2.6z"
+                    ></path>
+                  </svg>
+                </div>
+                <div class="next">
+                  <svg
+                    data-encore-id="icon"
+                    role="img"
+                    aria-hidden="true"
+                    viewBox="0 0 16 16"
+                    class="Svg-sc-ytk21e-0 kPpCsU"
+                  >
+                    <path
+                      d="M12.7 1a.7.7 0 0 0-.7.7v5.15L2.05 1.107A.7.7 0 0 0 1 1.712v12.575a.7.7 0 0 0 1.05.607L12 9.149V14.3a.7.7 0 0 0 .7.7h1.6a.7.7 0 0 0 .7-.7V1.7a.7.7 0 0 0-.7-.7h-1.6z"
+                    ></path>
+                  </svg>
+                </div>
+                <div class="shuffle">
+                  <svg
+                    data-encore-id="icon"
+                    role="img"
+                    aria-hidden="true"
+                    viewBox="0 0 16 16"
+                    class="Svg-sc-ytk21e-0 kPpCsU"
+                  >
+                    <path
+                      d="M13.151.922a.75.75 0 1 0-1.06 1.06L13.109 3H11.16a3.75 3.75 0 0 0-2.873 1.34l-6.173 7.356A2.25 2.25 0 0 1 .39 12.5H0V14h.391a3.75 3.75 0 0 0 2.873-1.34l6.173-7.356a2.25 2.25 0 0 1 1.724-.804h1.947l-1.017 1.018a.75.75 0 0 0 1.06 1.06L15.98 3.75 13.15.922zM.391 3.5H0V2h.391c1.109 0 2.16.49 2.873 1.34L4.89 5.277l-.979 1.167-1.796-2.14A2.25 2.25 0 0 0 .39 3.5z"
+                    ></path>
+                    <path
+                      d="m7.5 10.723.98-1.167.957 1.14a2.25 2.25 0 0 0 1.724.804h1.947l-1.017-1.018a.75.75 0 1 1 1.06-1.06l2.829 2.828-2.829 2.828a.75.75 0 1 1-1.06-1.06L13.109 13H11.16a3.75 3.75 0 0 1-2.873-1.34l-.787-.938z"
+                    ></path>
+                  </svg>
+                </div>
               </div>
-              <div class="previous">
-                <svg
-                  data-encore-id="icon"
-                  role="img"
-                  aria-hidden="true"
-                  viewBox="0 0 16 16"
-                  class="Svg-sc-ytk21e-0 kPpCsU"
-                >
-                  <path
-                    d="M3.3 1a.7.7 0 0 1 .7.7v5.15l9.95-5.744a.7.7 0 0 1 1.05.606v12.575a.7.7 0 0 1-1.05.607L4 9.149V14.3a.7.7 0 0 1-.7.7H1.7a.7.7 0 0 1-.7-.7V1.7a.7.7 0 0 1 .7-.7h1.6z"
-                  ></path>
-                </svg>
-              </div>
-              <div class="play">
-                <svg
-                  data-encore-id="icon"
-                  role="img"
-                  aria-hidden="true"
-                  viewBox="0 0 24 24"
-                  class="Svg-sc-ytk21e-0 iYxpxA"
-                >
-                  <path
-                    d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"
-                  ></path>
-                </svg>
-              </div>
-              <div class="pause hidden">
-                <svg
-                  data-encore-id="icon"
-                  role="img"
-                  aria-hidden="true"
-                  viewBox="0 0 24 24"
-                  class="Svg-sc-ytk21e-0 iYxpxA"
-                >
-                  <path
-                    d="M5.7 3a.7.7 0 0 0-.7.7v16.6a.7.7 0 0 0 .7.7h2.6a.7.7 0 0 0 .7-.7V3.7a.7.7 0 0 0-.7-.7H5.7zm10 0a.7.7 0 0 0-.7.7v16.6a.7.7 0 0 0 .7.7h2.6a.7.7 0 0 0 .7-.7V3.7a.7.7 0 0 0-.7-.7h-2.6z"
-                  ></path>
-                </svg>
-              </div>
-              <div class="next">
-                <svg
-                  data-encore-id="icon"
-                  role="img"
-                  aria-hidden="true"
-                  viewBox="0 0 16 16"
-                  class="Svg-sc-ytk21e-0 kPpCsU"
-                >
-                  <path
-                    d="M12.7 1a.7.7 0 0 0-.7.7v5.15L2.05 1.107A.7.7 0 0 0 1 1.712v12.575a.7.7 0 0 0 1.05.607L12 9.149V14.3a.7.7 0 0 0 .7.7h1.6a.7.7 0 0 0 .7-.7V1.7a.7.7 0 0 0-.7-.7h-1.6z"
-                  ></path>
-                </svg>
-              </div>
-              <div class="shuffle">
-                <svg
-                  data-encore-id="icon"
-                  role="img"
-                  aria-hidden="true"
-                  viewBox="0 0 16 16"
-                  class="Svg-sc-ytk21e-0 kPpCsU"
-                >
-                  <path
-                    d="M13.151.922a.75.75 0 1 0-1.06 1.06L13.109 3H11.16a3.75 3.75 0 0 0-2.873 1.34l-6.173 7.356A2.25 2.25 0 0 1 .39 12.5H0V14h.391a3.75 3.75 0 0 0 2.873-1.34l6.173-7.356a2.25 2.25 0 0 1 1.724-.804h1.947l-1.017 1.018a.75.75 0 0 0 1.06 1.06L15.98 3.75 13.15.922zM.391 3.5H0V2h.391c1.109 0 2.16.49 2.873 1.34L4.89 5.277l-.979 1.167-1.796-2.14A2.25 2.25 0 0 0 .39 3.5z"
-                  ></path>
-                  <path
-                    d="m7.5 10.723.98-1.167.957 1.14a2.25 2.25 0 0 0 1.724.804h1.947l-1.017-1.018a.75.75 0 1 1 1.06-1.06l2.829 2.828-2.829 2.828a.75.75 0 1 1-1.06-1.06L13.109 13H11.16a3.75 3.75 0 0 1-2.873-1.34l-.787-.938z"
-                  ></path>
-                </svg>
+            </div>
+          </div>
+          <div class="seek"></div>
+        </div>
+      </div>
+    </section>
+    <main class="main">
+      <section class="book show">
+        <div class="introduction padding back-blue">
+          <div class="inner back-white">
+            <h2 class="caption">introduction</h2>
+            <div class="flex">
+              <div class="textContainer">
+                <p>
+                  累計16万部突破『きみが明日、この世界から～』シリーズ著者が描く新たなかたちの悲恋と感動。
+                </p>
+                <p>
+                  小説×音楽――。大手音楽配信サイト『レコチョク』とのコラボレーションプロジェクト！
+                </p>
+                <p class="reference">【紹介ページより】</p>
               </div>
             </div>
           </div>
         </div>
-        <div class="page"></div>
-      </div>
-    </div>
+        <div class="story padding back-white">
+          <div class="inner">
+            <h2 class="caption">story</h2>
+            <div class="flex">
+              <div class="textContainer">
+                <p>
+                  「この教室でのわたしの存在感なんて、たぶん、壁に貼られたポスターぐらいなものだろう。ある日、それが別のものに代わっていたって、きっと誰も気づかない」
+                </p>
+                <p>
+                  家庭にも学校にも居場所がなく、生きることにしんどさを感じる高校生のあかり。
+                </p>
+                <p>
+                  ある時、クラスメイトの言葉で「どうしてもやりたいこと」が見つかり、存在を認められたと思ったものの――。
+                </p>
+                <p>
+                  あかりの“もうひとりのわたし”を中心に繰り広げられる、それぞれが何かしら苦悩を抱えた高校生たちの「好きだから、泣いてしまう」恋のストーリー。
+                </p>
+                <p class="reference">【紹介ページより】</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="author padding back-blue">
+          <div class="inner">
+            <h2 class="caption">author</h2>
+            <div class="flex">
+              <div class="textContainer">
+                <p class="subhead">此見えこ</p>
+                <p>
+                  福岡県出身。『きみが明日、この世界から消える前に』でデビューし、同作は１３万部突破の大ヒット（本データはこの書籍が刊行された当時に掲載されていたものです）
+                </p>
+                <p>
+                  ※書籍に掲載されている著者及び編者、訳者、監修者、イラストレーターなどの紹介情報です。
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="interview padding back-white">
+          <div class="inner">
+            <h2 class="caption">interview</h2>
+            <div class="flex">
+              <div class="textContainer">
+                <h3>
+                  『今夜、死にたいきみは、明日を歌う』此見えこさんインタビュー
+                </h3>
+                <p>
+                  【オトトモジ】プロジェクト最新作は苦悩を抱えた高校生たちの物語。
+                </p>
+                <p>
+                  劣等感や嫉妬心など、ままならないことに悩みながらも、一歩踏み出していく姿を描きました
+                </p>
+                <a href="https://t.co/hgCJsdA9o8">記事を読む</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="shop padding back-blue">
+          <div class="inner">
+            <h2 class="caption">shop</h2>
+            <div class="flex">
+              <div class="imgContainer">
+                <div class="goshop">
+                  <div class="links">
+                    <a
+                      class=""
+                      href="https://www.amazon.co.jp/dp/4575246905?tag=futabashanet-22&amp;linkCode=osi&amp;th=1&amp;psc=1"
+                      target="_blank"
+                      vcdaldp-fin=""
+                      data-nodal=""
+                      ><img
+                        width="160"
+                        height="60"
+                        src="https://d2l33iqw5tfm1m.cloudfront.net/affiliate_banner/E7trY4jR4OSk56whO9G8Bx9HuyliKmctmPTA2qjt.jpg"
+                        alt="amazon"
+                        rel="nofollow"
+                      /><!----></a
+                    ><a
+                      class=""
+                      href="http://hb.afl.rakuten.co.jp/hgc/1539c635.dedb966b.1539c636.fd5e85f4/_RTLink74332?pc=http://search.books.rakuten.co.jp/bksearch/nm%3fsitem=978-4-575-24690-2"
+                      target="_blank"
+                      vcdaldp-fin=""
+                      data-nodal=""
+                      ><img
+                        width="160"
+                        height="60"
+                        src="https://d2l33iqw5tfm1m.cloudfront.net/affiliate_banner/fdoWxRvmdzWMl4gSPNm5wM8JIFr6TXTBGv2cL7vt.jpg"
+                        alt="楽天ブックス"
+                        rel="nofollow"
+                      /><!----></a
+                    ><a
+                      class=""
+                      href="http://ck.jp.ap.valuecommerce.com/servlet/referral?sid=2469031&amp;pid=884294867&amp;vc_url=http%3A%2F%2F7net.omni7.jp%2Fdetail_isbn%2F978-4-575-24690-2&amp;vcpub=0.798886&amp;vcid=IQ8E5X948f_1JciNFbEBkf535ewMCI4txUjTPyQ8IRzPyDnXK4_3UQ_U9DTLAkXsH6DJ8Au47R8&amp;isec=1700360355"
+                      target="_blank"
+                      ><img
+                        width="160"
+                        height="60"
+                        src="https://d2l33iqw5tfm1m.cloudfront.net/affiliate_banner/dCtFfo6lGXExvgtWpkmqRnXh1LO9yJ7ztQ3D8fXr.jpg"
+                        alt="セブンネットショッピング"
+                        rel="nofollow" /><img
+                        class="valuecommerce"
+                        src="https://ad.jp.ap.valuecommerce.com/servlet/gifbanner?sid=2469031&amp;pid=884294867"
+                        height="1"
+                        width="0"
+                        border="0" /></a
+                    ><a
+                      class=""
+                      href="http://ck.jp.ap.valuecommerce.com/servlet/referral?sid=2469031&amp;pid=889610473&amp;vc_url=https%3A%2F%2Fwww.animate-onlineshop.jp%2Fproducts%2Flist.php%3Fmode%3Dsearch%26smt%3D9784575246902&amp;vcpub=0.798886&amp;vcid=IQ8E5X948f_1JciNFbEBkf535ewMCI4txUjTPyQ8IRzPyDnXK4_3UQ_U9DTLAkXsH6DJ8Au47R8&amp;isec=1700360355"
+                      target="_blank"
+                      ><img
+                        width="160"
+                        height="60"
+                        src="https://d2l33iqw5tfm1m.cloudfront.net/affiliate_banner/PYvEzgavbHN3eNLD0Dffa6GUkxB2MeGf6Dqhud7D.jpg"
+                        alt="アニメイト"
+                        rel="nofollow" /><img
+                        class="valuecommerce"
+                        src="https://ad.jp.ap.valuecommerce.com/servlet/gifbanner?sid=2469031&amp;pid=889610473"
+                        height="1"
+                        width="0"
+                        border="0" /></a
+                    ><a
+                      class=""
+                      href="http://ck.jp.ap.valuecommerce.com/servlet/referral?sid=2469031&amp;pid=876936160&amp;vc_url=https%3A%2F%2Fwww.kinokuniya.co.jp%2Ff%2Fdsg-01-9784575246902&amp;vcpub=0.798886&amp;vcid=IQ8E5X948f_1JciNFbEBkf535ewMCI4txUjTPyQ8IRzPyDnXK4_3UQ_U9DTLAkXsH6DJ8Au47R8&amp;isec=1700360355"
+                      target="_blank"
+                      ><img
+                        width="160"
+                        height="60"
+                        src="https://d2l33iqw5tfm1m.cloudfront.net/affiliate_banner/bTwEJU6Dw5XB7RueMaLVjOS7Sp1DfidnkvfXcmIY.jpg"
+                        alt="紀伊国屋書店"
+                        rel="nofollow" /><img
+                        class="valuecommerce"
+                        src="https://ad.jp.ap.valuecommerce.com/servlet/gifbanner?sid=2469031&amp;pid=876936160"
+                        height="1"
+                        width="0"
+                        border="0" /></a
+                    ><a
+                      class=""
+                      href="https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=2469031&amp;pid=889269118&amp;vc_url=https://tower.jp/search/item/9784575246902&amp;vcpub=0.798886&amp;vcid=IQ8E5X948f_1JciNFbEBkf535ewMCI4txUjTPyQ8IRzPyDnXK4_3UQ_U9DTLAkXsH6DJ8Au47R8&amp;isec=1700360355"
+                      target="_blank"
+                      ><img
+                        width="160"
+                        height="60"
+                        src="https://d2l33iqw5tfm1m.cloudfront.net/affiliate_banner/ne3KbJMh9gNPAN0GibM9RQWgcFoKUsuG9VtucN82.jpg"
+                        alt="タワーレコード"
+                        rel="nofollow" /><img
+                        class="valuecommerce"
+                        src="https://ad.jp.ap.valuecommerce.com/servlet/gifbanner?sid=2469031&amp;pid=889269118"
+                        height="1"
+                        width="0"
+                        border="0" /></a
+                    ><a
+                      class=""
+                      href="http://ck.jp.ap.valuecommerce.com/servlet/referral?sid=2469031&amp;pid=876936166&amp;vc_url=https%3A%2F%2Fhonto.jp%2Fnetstore%2Fsearch_109784575246902.html%3Fsrchf%3D1%26tbty%3D1&amp;vcpub=0.798886&amp;vcid=IQ8E5X948f_1JciNFbEBkf535ewMCI4txUjTPyQ8IRzPyDnXK4_3UQ_U9DTLAkXsH6DJ8Au47R8&amp;isec=1700360355"
+                      target="_blank"
+                      ><img
+                        width="160"
+                        height="60"
+                        src="https://d2l33iqw5tfm1m.cloudfront.net/affiliate_banner/IMrNbm20pChDBB4lRbiIbGkiHZh9rq13uDM5w86x.jpg"
+                        alt="honto"
+                        rel="nofollow" /><img
+                        class="valuecommerce"
+                        src="https://ad.jp.ap.valuecommerce.com/servlet/gifbanner?sid=2469031&amp;pid=876936166"
+                        height="1"
+                        width="0"
+                        border="0" /></a
+                    ><a
+                      class=""
+                      href="http://ck.jp.ap.valuecommerce.com/servlet/referral?sid=2469031&amp;pid=885556288&amp;vc_url=http%3A%2F%2Fshop.tsutaya.co.jp%2Fbook%2Fproduct%2F9784575246902%2F&amp;vcpub=0.798886&amp;vcid=IQ8E5X948f_1JciNFbEBkf535ewMCI4txUjTPyQ8IRzPyDnXK4_3UQ_U9DTLAkXsH6DJ8Au47R8&amp;isec=1700360355"
+                      target="_blank"
+                      ><img
+                        width="160"
+                        height="60"
+                        src="https://d2l33iqw5tfm1m.cloudfront.net/affiliate_banner/jgVG5KxsRoYrmpNnx5sKTFs01lwz2XCi8Di6hX5V.jpg"
+                        alt="TSUTAYA"
+                        rel="nofollow" /><img
+                        class="valuecommerce"
+                        src="https://ad.jp.ap.valuecommerce.com/servlet/gifbanner?sid=2469031&amp;pid=885556288"
+                        height="1"
+                        width="0"
+                        border="0" /></a
+                    ><a
+                      class=""
+                      href="http://ck.jp.ap.valuecommerce.com/servlet/referral?sid=2469031&amp;amp;pid=889610470&amp;amp;vc_url=https%3A%2F%2Fwww.mangazenkan.com%2Fs%2F%3Fq%3D%E4%BB%8A%E5%A4%9C%E3%80%81%E6%AD%BB%E3%81%AB%E3%81%9F%E3%81%84%E3%81%8D%E3%81%BF%E3%81%AF%E3%80%81%E6%98%8E%E6%97%A5%E3%82%92%E6%AD%8C%E3%81%86&amp;vcpub=0.798886&amp;vcid=IQ8E5X948f_1JciNFbEBkf535ewMCI4txUjTPyQ8IRzPyDnXK4_3UQ_U9DTLAkXsH6DJ8Au47R8&amp;isec=1700360355"
+                      target="_blank"
+                      ><img
+                        width="160"
+                        height="60"
+                        src="https://d2l33iqw5tfm1m.cloudfront.net/affiliate_banner/C9kv8CLua8GzKMi42u8fWO4w6db8WCQxjeyLnsOi.jpg"
+                        alt="漫画全巻ドットコム"
+                        rel="nofollow" /><img
+                        class="valuecommerce"
+                        src="https://ad.jp.ap.valuecommerce.com/servlet/gifbanner?sid=2469031&amp;pid=889610470"
+                        height="1"
+                        width="0"
+                        border="0" /></a
+                    ><a
+                      class=""
+                      href="https://click.linksynergy.com/deeplink?id=WEND7IkjfHw&amp;mid=2880&amp;murl=https%3A%2F%2Fwww.hmv.co.jp%2Fsearch%2Fkeyword_9784575246902%2Ftarget_ALL%2Ftype_sr%2F"
+                      target="_blank"
+                      vcdaldp-fin=""
+                      data-nodal=""
+                      ><img
+                        width="160"
+                        height="60"
+                        src="https://d2l33iqw5tfm1m.cloudfront.net/affiliate_banner/ALd4Jc9WgSthU6ZuR90BHmhkZNrRytpsJCniduj2.jpg"
+                        alt="HMV"
+                        rel="nofollow"
+                      /><!----></a
+                    ><a
+                      class=""
+                      href="https://www.e-hon.ne.jp/bec/SA/Detail?refBook=978-4-575-24690-2"
+                      target="_blank"
+                      vcdaldp-fin=""
+                      data-nodal=""
+                      ><img
+                        width="160"
+                        height="60"
+                        src="https://d2l33iqw5tfm1m.cloudfront.net/affiliate_banner/0xiD6vZl7l9pKQkc7f5r0nyhP6LDHljiulzgiEle.jpg"
+                        alt="e-hon"
+                        rel="nofollow"
+                      /><!----></a
+                    ><a
+                      class=""
+                      href="http://linksynergy.jrs5.com/fs-bin/click?id=WEND7IkjfHw&amp;subid=&amp;offerid=236754.1&amp;type=10&amp;tmpid=8177&amp;RD_PARM1=http%3A%2F%2Fwww.honyaclub.com%2Fshop%2Faffiliate%2Fitemlist.aspx%3Fisbn%3D9784575246902%2526etcaff%3DAFI-LS"
+                      target="_blank"
+                      vcdaldp-fin=""
+                      data-nodal=""
+                      ><img
+                        width="160"
+                        height="60"
+                        src="https://d2l33iqw5tfm1m.cloudfront.net/affiliate_banner/q8BtYQiNihpFEPHcpQ8a39c0fBVDZ6NgXBG4P0fd.jpg"
+                        alt="Honya Club"
+                        rel="nofollow"
+                      /><!----></a
+                    >
+                  </div>
+                  <!---->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="music">
+        <div class="introduction padding back-red">
+          <div class="inner back-white">
+            <h2 class="caption">introduction</h2>
+            <div class="flex">
+              <div class="imgContainer">
+                <img
+                  src="./img/392930489_304358269055533_71850160166483626_n.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="textContainer">
+                <p>
+                  この曲は音源リリースと同日、10月10日刊行される此見えこの書き下ろし小説「今夜、死にたいきみは、明日を歌う」（双葉社刊）の主題歌。
+                </p>
+                <p>
+                  此見は福岡県出身で『きみが明日、この世界から消える前に』でデビューし、13万部突破の大ヒットを記録し、高校生の恋愛ものを中心に、以後もヒット作を連発している。此見はこの灯橙の曲を聴いて「小説の内容を大切にしてくださっているのが伝わる歌詞も、本当に素晴らしくて泣きそうでした。しんどいとき、消えたいと思ったときに寄り添ってくれて、そして力をくれるような歌だと思います。」とコメントを寄せ、また灯橙は、この小説を読んで「主人公と自分のこれまでがすごくかぶる気がした。登場人物にも共感できた。作曲に取り掛かる前に、登場人物の心情や、性格や姿までノートに事細かに書き出しました。曲から入る人もいるだろうし、プロジェクトから離れたところで知った人にも共感してもらえる曲にしたかったので視点を変えて何通りもの歌詞を書きました。」とエピソードを話している。
+                </p>
+                <p class="reference">【紹介ページより】</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="song padding back-white">
+          <div class="inner">
+            <h2 class="caption">story</h2>
+            <div class="flex">
+              <div class="textContainer">
+                <p>
+                  『死にたいと思うのは、いつもこういう、何気ないときだった。』
+                </p>
+                <p class="reference">今夜、死にたいきみは、明日を歌う より</p>
+                <br />
+                <p>消えたいと思った</p>
+                <p>消したいと思った</p>
+                <p>生きたいと思った</p>
+                <p>どうしようもない夜に</p>
+                <p>ぜひお聴きください。</p>
+                <p class="reference">【instagramより】</p>
+              </div>
+              <div class="imgContainer">
+                <img
+                  src="./img/401601055_1031928988129222_6593921535174680012_n.jpg"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="credit padding back-red">
+          <div class="inner">
+            <h2 class="caption">credit</h2>
+            <div class="flex">
+              <div class="imgContainer">
+                <img src="./img/promotion.jpg" alt="灯橙あか" />
+              </div>
+              <div class="textContainer">
+                <p class="subhead">
+                  灯橙あか<span class="part"
+                    >Written , Acoustic Guitar & Chorus</span
+                  >
+                </p>
+                <p>長野県出身、関西発のシンガーソングライター 。</p>
+                <p>
+                  Youtubeグループ「WHITEBOX」のリードメンバーとしても活動中。
+                </p>
+                <p>
+                  ”心”にフォーカスした繊細かつ独特な歌詞と、キャッチーで色彩豊かなメロディーが持ち味。
+                </p>
+                <p>
+                  作詞作曲はもちろん、編曲、映像編集、イラスト、各サイト運営まで幅広く手掛ける。
+                </p>
+                <p>
+                  2022年4月に上京し、5月に1st.Full Album『The Labeling』を発売
+                  。
+                </p>
+                <p>
+                  12月初の東京ワンマンライブをソールド、次ぐアコースティックワンマンも成功し、現在はさらなるステージを踏むべく新曲を鋭意制作中である。
+                </p>
+              </div>
+            </div>
+            <div class="flex">
+              <div class="textContainer">
+                <p class="subhead">
+                  安部潤<span class="part"
+                    >Arranged, Piano, Keyboards & Programming</span
+                  >
+                </p>
+                <p>
+                  音楽プロデューサー、アレンジャー、ピアニスト、キーボードプレーヤー
+                </p>
+                <p>1968年3月1日生まれ 福岡県出身</p>
+                <p>
+                  92年より上京し、作編曲
+                  家・サウンドプロデューサーとして、Jポップ、ジャズ・フュージョンシーンに
+                  おいて、数多くのレコーディング、ライヴツアーに参加。
+                </p>
+                <p>
+                  また、テレビやラジオ
+                  のCM音楽、映画(最新作は2016年1月に公開された「さらばあぶない刑事」の
+                  劇中音楽)など、多岐に渡るジャンルの音楽を、幅広く手がけている。
+                </p>
+                <p>
+                  米、北欧、
+                  アジアでのレコーディングやライブなど海外視野の活動も積極的に行っている。
+                </p>
+              </div>
+              <div class="imgContainer">
+                <img
+                  src="./img/image_processing20230821-467-bf4i0x.jpg"
+                  alt="常夜灯をあなたに"
+                />
+              </div>
+            </div>
+            <div class="flex">
+              <div class="textContainer">
+                <p class="subhead">入江誠<span class="part">Guitars</span></p>
+                <p>
+                  福岡出身・東京在住のギタリスト、シンガー、作編曲家。
+                  スタジオワークと共にアーティストとしても活動中。
+                </p>
+              </div>
+              <div class="textContainer">
+                <p class="subhead">横田健斗<span class="part">Bass</span></p>
+                <p>1990年9月4日生まれ</p>
+                <p>群馬県渋川市出身</p>
+                <p>
+                  正則学園高等学校2年生、ビッグバンド部にてジャズに出会い、
+                  17歳からエレクトリックベースを始める。
+                </p>
+                <p>
+                  高校3年生、ジュリアード音楽院ジャズワークショップに参加し、
+                  中村恭士氏から指導を受けて多大な示唆を得る。
+                </p>
+                <p>昭和音楽大学にて安ヵ川大樹氏に師事。</p>
+                <p>
+                  大学2年生、
+                  明治大学ビッグ・サウンズ・ソサエティ・オーケストラに所属。
+                  第41回山野ビッグバンドジャズコンテストにて
+                  スウィングジャーナル賞を受賞。
+                </p>
+                <p>
+                  19歳より都内ジャズライブハウスよりプロの場で演奏を開始、
+                  現在は都内のジャズライブハウス出演や
+                  スタジオミュージシャンとしてサポートレコーディング等、
+                  ジャンルにとらわれず幅広く活動している。
+                </p>
+                <p>
+                  ウッドベース、エレクトリックベースの
+                  二つの楽器を操り、堅実かつ芸術的な演奏は好評を博している。
+                </p>
+              </div>
+            </div>
+            <div class="flex">
+              <div class="textContainer">
+                <p class="subhead">
+                  宮川剛<span class="part">Drums& Percussions</span>
+                </p>
+                <p>ドラマー、パーカッショニスト</p>
+                <p>
+                  長崎県出身。中学時代YMOのコピーバンドでドラムを始め、九州芸術工科大学在学中より藤山英一郎、原田迅明氏に師事し、ジャズドラマーとして活動開始。忌野清志郎
+                  & NICE MIDDLE WITH NEW BLUE DAY HORNS
+                  のドラマーを経て、数々のアーティストのレコーディング、ツアーに参加。宮沢和史率いる
+                  GANGA
+                  ZUMBA（ガンガズンバ）では、パーカッショニストの今福健司、マルコス・スザーノと共にバンドを支える。また、マルコス・スザーノ直伝のパンデイロでの演奏は、全く新しい独自のスタイルを確立している。
+                </p>
+              </div>
+              <div class="textContainer">
+                <p class="subhead">三井大生<span class="part">Violin</span></p>
+                <p>
+                  幼少期よりバイオリン教育を受け、14歳の時に所属していたオーケストラで欧州演奏旅行にも参加。一方、中学時代からギターも弾き始め、ロック、ブルース、ジャズ、ボサノヴァ、ポップスなどのジャンルを経験する。
+                </p>
+                <p>
+                  大学時代からプロのミュージシャンに混じってジャズを軸足とした演奏活動を開始するものの、その後、大学院から銀行系シンクタンクに就職。エグゼクティブへの道を邁進するかと思われたが、裏表を垣間見てしまった世の中の色々なしくみや、日本の音楽エンタテインメントの現状などに疑問を持ち、もはや離れることが出来なくなっていた音楽の世界へと本格的に身を投じる。
+                </p>
+                <p>
+                  音楽キャリアのスタートまでに回り道をしたものの、クラシック音楽教育による基礎的素養、様々なジャンルを経験したことによる自由な音楽性は、『音楽的自然児（by大塚善章／関西JAZZ協会会長）』などと評され、場面ごとに変化に富んだ音色・グルーヴ感にあふれるプレイ・自由なアドリブプレイ等が各方面で安定した評価を得ている。
+                </p>
+                <p>
+                  現在は弦楽器７本とリズムセクションで往年のビッグバンドナンバーを奏でる三井大生＆Swing
+                  Strings
+                  Orchestra主催。その他、ソロ・プレイヤーとして、またセクションリーダーとして、ライブ・コンサート・スタジオなどで積極的に活動している。
+                </p>
+              </div>
+            </div>
+            <div class="flex">
+              <div class="textContainer">
+                <p class="subhead">
+                  木村正和<span class="part"
+                    >Recording Engineer& Mixing Engineer</span
+                  >
+                </p>
+                <p>
+                  1988年、MITstudio 入社　1995年にフリーとなり、2015年
+                  株式会社インアンドアウトを設立。J.popからJazz・Fusion、
+                  映画音楽やドラマの劇伴など、あらゆるジャンルを手がける。近年はワールドワイドに活躍する川口千里のプロデュースを手掛けるなど、プロデューサーとしても活躍する。
+                </p>
+              </div>
+              <div class="textContainer">
+                <p class="subhead">
+                  堀内陽平<span class="part">Mixing Engineer</span>
+                </p>
+                <p>出身地：山梨県</p>
+                <p>略歴：LD&K inc. → Joint1</p>
+              </div>
+            </div>
+            <div class="flex">
+              <div class="textContainer">
+                <p class="subhead">湊川萌<span class="part">Movie</span></p>
+                <p>
+                  Videographer.
+                  MV制作、ライブ映像・写真、アーティスト写真、ジャケット制作なんでもやります。何処へでも行きます。旅好きです。
+                </p>
+              </div>
+              <div class="textContainer">
+                <p class="subhead">
+                  miss morgan hotel<span class="part">撮影協力</span>
+                </p>
+                <a href="https://miss-morgan.com/">公式サイトへ</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="movie padding back-white">
+          <div class="inner">
+            <h2 class="caption">movie</h2>
+            <div class="flex">
+              <iframe
+                width="447"
+                height="795"
+                src="https://www.youtube.com/embed/Gs6ERy1vFDU?si=qHltZA530o2uza79"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+              <iframe
+                width="447"
+                height="795"
+                src="https://www.youtube.com/embed/GsMO0FL-6sE?si=qHltZA530o2uza79"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+              <iframe
+                width="447"
+                height="795"
+                src="https://www.youtube.com/embed/rzvbj_sA2mo?si=qHltZA530o2uza79"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div class="flex">
+              <a
+                href="https://youtu.be/E6bWKdDzaxY?si=qH3m3AUShtlYIIke"
+                class="link-btn"
+                >YouTubeでフルを観る</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <small class="book show back-blue">levure@babys</small>
+      <small class="music back-red">levure@babys</small>
+    </footer>
   </body>
   <script>
     $(".page").click(function () {
-      $("#book1").addClass("open");
+      $("#book").addClass("open");
+      $(".book").removeClass("show");
       setTimeout(function () {
-        $(".page").hide();
-        $("#book1").addClass("ready");
-        $("#book1").removeClass("open");
-      }, 1500);
+        $("#book").addClass("fadeout");
+        $(".book").hide();
+        $(".music").show();
+      }, 500);
+      setTimeout(function () {
+        $(".music").addClass("show");
+        $("#book").removeClass("open");
+      }, 1000);
     });
     $(".play").click(function () {
-      $(".page").show();
       $(".seek").addClass("active");
       $(".play").addClass("hidden");
       $(".pause").removeClass("hidden");
       setTimeout(function () {
-        $("#book1").removeClass("ready");
-      }, 100);
+        $("#music").addClass("fadeout");
+        $(".seek").addClass("move");
+        $(".music").removeClass("show");
+      }, 1000);
       setTimeout(function () {
-        $("#book1").removeClass("ready");
-        $(".seek").removeClass("active");
+        $(".music").hide();
+        $(".book").show();
+      }, 1500);
+      setTimeout(function () {
+        $(".content-area").css("overflow-y", "hidden");
+        $("#book").removeClass("fadeout");
+        $("#book").addClass("fadein");
+        $(".book").addClass("show");
+      }, 2000);
+      setTimeout(function () {
+        $(".content-area").css("overflow-y", "");
+        $("#book").removeClass("fadein");
+        $("#music").removeClass("fadeout");
         $(".play").removeClass("hidden");
         $(".pause").addClass("hidden");
-      }, 1200);
+        $(".seek").removeClass("active");
+        $(".seek").removeClass("move");
+      }, 2500);
     });
   </script>
 </html>

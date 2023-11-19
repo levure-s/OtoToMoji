@@ -1,41 +1,140 @@
 img {
   max-width: 100%;
 }
+p {
+  font-family: serif;
+}
+header {
+  width: 100%;
+  height: 4em;
+  position: relative;
+}
+main {
+  position: relative;
+}
+footer {
+  position: relative;
+}
+footer small {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 1em;
+  color: #fff;
+}
+.flex {
+  display: flex;
+  justify-content: space-around;
+}
+.padding {
+  padding: 2em;
+}
+.back-red {
+  background-color: #d7746f;
+}
+.back-blue {
+  background-color: #e8f5fb;
+}
+.back-white {
+  background-color: #fff;
+}
+.fadein {
+  animation: fadein 0.5s linear forwards;
+}
+.fadeout {
+  animation: fadeout 0.5s linear forwards;
+}
+@keyframes fadein {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@keyframes fadeout {
+  100% {
+    opacity: 0;
+  }
+}
+.music {
+  display: none;
+}
+.book,
+.music {
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+.book.show,
+.music.show {
+  opacity: 1;
+}
+
 .content-area {
-  width: 100vw;
-  overflow: hidden;
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
+}
+.content-area .inner {
+  position: relative;
+  margin: auto;
+  width: 80%;
+  padding: 0;
+}
+.content-wraper {
+  background-color: #f5f1a8;
+  padding: 2em 0;
 }
 
 .page,
-.page-lock {
-  width: 100vw;
-  height: 146vw;
+.page-lock,
+.page-back {
+  width: 100%;
+  aspect-ratio: 491 / 720;
   border: 1px solid black;
   box-sizing: border-box;
-  position: relative;
   transform-style: preserve-3d;
   transition: 1.5s;
 }
 
 .page-lock {
-  background-color: #191919;
+  position: relative;
 }
 
-.page {
+.page,
+.page-back {
   position: absolute;
   top: 0;
   left: 0;
   z-index: 1;
-  background: url(../img/book.jpg);
-  background-size: cover;
   transform-origin: right;
 }
-
-#book1.open .page {
-  transform: rotateY(-180deg);
+.page {
+  background: url(../img/book.jpg);
+  background-size: cover;
 }
-#book1.ready .page {
-  left: -100vw;
+.page-back {
+  content: "";
+  background-color: #fff;
+}
+
+#book.open .page {
+  transform: rotateY(-180deg) translateZ(0px);
+}
+#book.open .page-back {
+  transform: rotateY(-180deg) translateZ(1px);
+  z-index: 2;
+}
+
+#music {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  aspect-ratio: 491 / 720;
+  background-color: #191919;
 }
 .frame {
   width: 80%;
@@ -46,6 +145,9 @@ img {
   border: solid 2px #cdec2c;
   text-align: center;
 }
+.player {
+  margin-top: 10%;
+}
 .frame img {
   width: 100%;
 }
@@ -53,22 +155,26 @@ img {
   position: relative;
   background-color: #949393;
   margin: auto;
-  margin-top: 10%;
   width: 80%;
   height: 3px;
   border-radius: 20px;
 }
 .seek {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: calc(21% + 320px);
+  left: 10%;
   width: 0;
   height: 3px;
   border-radius: 20px;
-  transition: width 1s ease;
+  transition: all 1s ease;
   background-color: #fff;
 }
 .seek.active {
+  width: 80%;
+}
+.seek.move {
+  top: 0;
+  left: 0;
   width: 100%;
 }
 .btn {
@@ -84,4 +190,106 @@ img {
 }
 .btn div.hidden {
   display: none;
+}
+
+.title-area {
+  width: 100%;
+  height: 100%;
+  color: #fff;
+}
+.title-area h1 {
+  position: absolute;
+  top: 50%;
+  left: 2em;
+  transform: translateY(-50%);
+}
+.title-area.book {
+  background-color: #4badd8;
+}
+.title-area.music {
+  background-color: #b62922;
+}
+.inner {
+  max-width: 1000px;
+  margin: auto;
+  padding: 1em 2em;
+}
+.caption {
+  text-align: center;
+  font-size: 1.2em;
+  padding-bottom: 1em;
+}
+.book .caption {
+  color: #4badd8;
+}
+.music .caption {
+  color: #b62922;
+}
+
+.imgContainer {
+  width: 48%;
+}
+.textContainer {
+  width: 48%;
+  line-height: 1.2em;
+}
+.reference {
+  text-align: right;
+  font-size: 0.8em;
+}
+.subhead {
+  color: #b62922;
+  margin-bottom: 1em;
+  border-bottom: solid 1px #b62922;
+  font-size: 1.5em;
+}
+.book .subhead {
+  color: #4badd8;
+  border-bottom: solid 1px #4badd8;
+}
+.part {
+  color: #000;
+  font-size: 0.5em;
+  padding-left: 1em;
+}
+.credit .flex,
+.movie .flex {
+  padding-bottom: 2em;
+}
+.movie iframe {
+  width: 30%;
+  height: auto;
+  aspect-ratio: 447 / 795;
+}
+.link-btn {
+  background-color: #cdec2c;
+  color: #fff;
+  border-radius: 20px;
+  width: fit-content;
+  padding: 1em;
+  text-decoration: none;
+}
+.goshop .links {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 25px;
+}
+.goshop .links a {
+  width: calc(33% - 11.25px);
+  margin-bottom: 15px;
+}
+
+@media (max-width: 670px) {
+  .flex {
+    display: block;
+  }
+  .content-area {
+    overflow: hidden;
+  }
+}
+@media (max-width: 500px) {
+  .seek {
+    top: calc(21% + 64vw);
+  }
 }
