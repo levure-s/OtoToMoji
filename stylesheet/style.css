@@ -220,7 +220,7 @@ footer p {
 }
 .caption {
   text-align: center;
-  font-size: 1.2em;
+  font-size: 1.8em;
   font-family: "report";
   padding-bottom: 1em;
 }
@@ -333,6 +333,9 @@ footer p {
   }
   .inner {
     padding: 1em;
+  }
+  .caption {
+    font-size: 1.2em;
   }
   .imgContainer {
     width: 100%;
