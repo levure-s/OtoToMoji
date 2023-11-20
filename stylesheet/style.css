@@ -1,7 +1,12 @@
+@font-face {
+  font-family: "report";
+  src: url(./1942.ttf);
+}
 img {
   max-width: 100%;
 }
-p {
+p,
+.title-area h1 {
   font-family: "游明朝 Medium", serif;
 }
 header {
@@ -216,6 +221,7 @@ footer p {
 .caption {
   text-align: center;
   font-size: 1.2em;
+  font-family: "report";
   padding-bottom: 1em;
 }
 .book .caption {
