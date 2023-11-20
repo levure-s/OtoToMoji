@@ -2,7 +2,7 @@ img {
   max-width: 100%;
 }
 p {
-  font-family: serif;
+  font-family: "游明朝 Medium", serif;
 }
 header {
   width: 100%;
@@ -230,7 +230,7 @@ footer p {
 }
 .textContainer {
   width: 48%;
-  line-height: 1.2em;
+  line-height: 1.5em;
 }
 .reference {
   text-align: right;
